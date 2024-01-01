@@ -1,4 +1,4 @@
-dict = {'shiv': 'shiv12345', 'raj': 'raj12345', 'rohan': 'rohan12345'}
+dict = {'shiv': 'shiv1234', 'raj': 'raj1234', 'rohan': 'rohan1234'}
 
 username = input("enter your username: ")
 
