@@ -1,22 +1,21 @@
-print("\nWelcome to the game - GUESS THE NUMBER.\n "
-          "In this game you have to guess the number by trial and error method but remember you have only 9 guesses :]\n")
+#guess the number game
+import random
 
-n=18
-c = 1
+def guess_the_number():
+    play_again = "yes"
+    
+    while play_again.lower() == "yes":
+        number = random.randint(1, 100)
+        guess = int(input("Guess the number between 1 and 100: "))
+        
+        while guess != number:
+            if guess < number:
+                print("Guess higher")
+            else:
+                print("Guess lower")
+            guess = int(input("Try again: "))
+        
+        print("You guessed it! The number was", number)
+        play_again = input("Do you want to play again? (yes/no): ")
 
-while(c<=9):
-    a = int(input("Please enter your guess: \n"))
-    if a > 18:
-        print("Please guess a number which is lesser")
-    elif a < 18:
-        print("Please guess a number which is greater")
-    else:
-        print("Congrats, You Won")
-        print("No. of guesses you took to win = " , c )
-        break
-    print("No. of guesses left= " , 9-c)
-    c = c+1
-
-if c > 9:
-
-    print("Game over")
+guess_the_number()
